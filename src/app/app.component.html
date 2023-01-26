@@ -8,8 +8,8 @@
     />
   </form>
 </div>
-
-<div class="container" *ngIf="weatherData">
+<!--This is the good code here-->
+<!-- <div class="container" *ngIf="weatherData">
   <div class="upper-data">
     <img
       src="../assets/Resources/Hot.webp"
@@ -33,7 +33,7 @@
       <div class="more-info-label">More Information</div>
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Min Icon.png" />
           <span>min</span>
         </div>
 
@@ -43,7 +43,7 @@
       </div>
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Max Icon.png" />
           <span>max</span>
         </div>
         <div class="info-block-value">
@@ -53,7 +53,7 @@
 
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Humidity Icon.png" />
           <span>humidity</span>
         </div>
 
@@ -63,7 +63,7 @@
       </div>
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Wind Icon.png" />
           <span>wind speed</span>
         </div>
 
@@ -73,25 +73,27 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<!-- <div class="container">
+<!--This is the hard code garbage-->
+
+<div class="container">
   <div class="upper-data">
-    <img src="../assets/Resources/Hot.webp" *ngIf="14 <= 15" />
-    <img src="../assets/Resources/cold.jpeg" *ngIf="14 > 15" />
+    <!-- <img src="../assets/Resources/Hot.webp" *ngIf="14 > 15" />
+    <img src="../assets/Resources/cold.jpeg" *ngIf="14 <= 15" /> -->
 
     <div class="weather-data">
-      <div class="location">Wellington</div>
+      <div class="location">Pisstown</div>
       <div class="temperature">{{ 14.4 | number : "1.0-0" }}°C</div>
     </div>
   </div>
 
   <div class="lower-data">
+    <div class="more-info-label">More Information</div>
     <div class="more-info-container">
-      <div class="more-info-label">More Information</div>
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Min Icon.png" />
           <span>min</span>
         </div>
 
@@ -99,7 +101,7 @@
       </div>
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Max Icon.png" />
           <span>max</span>
         </div>
         <div class="info-block-value">20°C</div>
@@ -107,7 +109,7 @@
 
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Humidity Icon.png" />
           <span>humidity</span>
         </div>
 
@@ -115,7 +117,7 @@
       </div>
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/thermometer.png" />
+          <img src="../assets/Resources/Wind Icon.png" />
           <span>wind speed</span>
         </div>
 
@@ -123,6 +125,6 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <router-outlet></router-outlet>
