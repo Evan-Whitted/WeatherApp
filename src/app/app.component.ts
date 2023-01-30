@@ -13,23 +13,23 @@ export class AppComponent implements OnInit {
 
   }
 
-  cityName: string = 'Washington' 
+  cityName: string = 'Chicago' 
   weatherData?: WeatherData;
   
   ngOnInit(): void  {
-    this.getWeatherData(this.cityName);
+    this.getWeatherDataFromCurrentLocation(this.cityName);
     this.cityName = '';
     
   };
   
   onSubmit() {
-    this.getWeatherData(this.cityName);
+    this.getWeatherFromSearch(this.cityName);
     this.cityName = '';
 
   }
 
-  private getWeatherData(cityName: string) {
-    this.weatherService.getWeatherData(cityName)
+  private getWeatherDataFromCurrentLocation(cityName: string) {
+    this.weatherService.getWeatherDataForCurrentLocation()
     .subscribe({
       next: (response) => {
         this.weatherData = response;
@@ -37,6 +37,11 @@ export class AppComponent implements OnInit {
         console.log(response);
       }
     })
+
+  }
+
+  getWeatherFromSearch(name: string): void {
+    
 
   }
 }

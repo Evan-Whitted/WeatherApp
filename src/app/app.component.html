@@ -9,28 +9,30 @@
   </form>
 </div>
 <!--This is the good code here-->
-<!-- <div class="container" *ngIf="weatherData">
+<div class="container" *ngIf="weatherData">
   <div class="upper-data">
-    <img
+    <!-- Uncomment this below if you need Ben -->
+
+    <!-- <img
       src="../assets/Resources/Hot.webp"
-      *ngIf="weatherData.currentConditions.temp > 42"
+      *ngIf="weatherData.main.temp > 42"
     />
     <img
       src="../assets/Resources/cold.jpeg"
-      *ngIf="weatherData.currentConditions.temp <= 42"
-    />
+      *ngIf="weatherData.main.temp <= 42"
+    /> -->
 
     <div class="weather-data">
-      <div class="location">{{ weatherData.address }}</div>
+      <div class="location">{{ weatherData.name }}</div>
       <div class="temperature">
-        {{ weatherData.currentConditions.temp | number : "1.0-0" }}°F
+        {{ weatherData.main.temp | number : "1.0-0" }}°F
       </div>
     </div>
   </div>
 
   <div class="lower-data">
+    <div class="more-info-label">More Information</div>
     <div class="more-info-container">
-      <div class="more-info-label">More Information</div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="../assets/Resources/Min Icon.png" />
@@ -38,7 +40,7 @@
         </div>
 
         <div class="info-block-value">
-          {{ weatherData.days[0].tempmin | number : "1.0-0" }}°F
+          {{ weatherData.main.temp_min | number : "1.0-0" }}°F
         </div>
       </div>
       <div class="info-block">
@@ -47,7 +49,7 @@
           <span>max</span>
         </div>
         <div class="info-block-value">
-          {{ weatherData.days[0].tempmax | number : "1.0-0" }}°F
+          {{ weatherData.main.temp_max | number : "1.0-0" }}°F
         </div>
       </div>
 
@@ -58,7 +60,7 @@
         </div>
 
         <div class="info-block-value">
-          {{ weatherData.currentConditions.humidity | number : "1.0-0" }}%
+          {{ weatherData.main.humidity | number : "1.0-0" }}%
         </div>
       </div>
       <div class="info-block">
@@ -67,20 +69,18 @@
           <span>wind speed</span>
         </div>
 
-        <div class="info-block-value">
-          {{ weatherData.currentConditions.windspeed }} mph
-        </div>
+        <div class="info-block-value">{{ weatherData.wind.speed }} mph</div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <!--This is the hard code garbage-->
 
-<div class="container">
+<!-- <div class="container">
   <div class="upper-data">
-    <!-- <img src="../assets/Resources/Hot.webp" *ngIf="14 > 15" />
-    <img src="../assets/Resources/cold.jpeg" *ngIf="14 <= 15" /> -->
+    <img src="../assets/Resources/Hot.webp" *ngIf="14 > 15" />
+    <img src="../assets/Resources/cold.jpeg" *ngIf="14 <= 15" />
 
     <div class="weather-data">
       <div class="location">Pisstown</div>
@@ -125,6 +125,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <router-outlet></router-outlet>

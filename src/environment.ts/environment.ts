@@ -1,10 +1,10 @@
-export const environment = {
-  production: false,
-  weatherApiBaseUrl: 'https://bestweather.p.rapidapi.com/weather',
-  XRapidAPIHostHeaderName: 'X-RapidAPI-Host',
-  XRapidAPIHostHeaderValue: 'bestweather.p.rapidapi.com',
-  XRapidAPIKeyHeaderName: 'X-RapidAPI-Key',
-  XRapidAPIKeyHeaderValue: '6f61232876mshe0451d5a29d1e61p1ab866jsn3bc3bcb465b5',
+// export const environment = {
+//   production: false,
+//   weatherApiBaseUrl: 'https://api.openweathermap.org/data/2.5/weather',
+//   XRapidAPIHostHeaderName: 'X-RapidAPI-Host',
+//   XRapidAPIHostHeaderValue: 'api.openweathermap.org/data/2.5/weather',
+//   XRapidAPIKeyHeaderName: 'X-RapidAPI-Key',
+//   XRapidAPIKeyHeaderValue: '656d825f90356ea3ea9a6e46f9d0603d',
 
 
-}
+// }
