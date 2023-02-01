@@ -30,6 +30,7 @@ API_KEY = '656d825f90356ea3ea9a6e46f9d0603d';
   })
     return this.http.get<WeatherData>(`https://api.openweathermap.org/data/2.5/weather?lat=${this.latitude}&lon=${this.longitude}&units=Imperial&appid=656d825f90356ea3ea9a6e46f9d0603d`); 
   
+  
 }
 
 
