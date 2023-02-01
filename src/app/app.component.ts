@@ -9,43 +9,49 @@ import { GeoCode } from './Models/geocode.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
- 
-  constructor( private weatherService: WeatherService) {
+  cityName: string = 'Chicago'
+  weatherData?: WeatherData;
+  geoCodes?: GeoCode[] = [];
+
+
+  constructor(private weatherService: WeatherService) {
 
   }
 
-  cityName: string = 'Chicago' 
-  weatherData?: WeatherData;
-  geoCodes?: GeoCode;
-  
-  
-  ngOnInit(): void  {
+  ngOnInit(): void {
     this.getWeatherDataFromCurrentLocation(this.cityName);
     this.cityName = '';
-    
-  };
-  
-  onSubmit() {
-    this.getWeatherFromSearch(this.cityName);
-    this.cityName = '';
-    
 
+  };
+
+  onSubmit() {
+    this.getWeatherDataFromSearch(this.cityName);
   }
 
   private getWeatherDataFromCurrentLocation(cityName: string) {
     this.weatherService.getWeatherDataForCurrentLocation()
-    .subscribe({
-      next: (response) => {
-        this.weatherData = response;
+      .subscribe({
+        next: (response) => {
+          this.weatherData = response;
 
-        console.log(response);
-      }
-    })
-
+          //console.log(response);
+        }
+      })
   }
 
-  getWeatherFromSearch(name: string): void {
-    this.getWeatherFromSearch(`http://api.openweathermap.org/geo/1.0/direct?q=${this.cityName}&limit=5&appid=656d825f90356ea3ea9a6e46f9d0603d`);
+  getWeatherDataFromSearch(cityName: string) {
+    this.weatherService.getGeoCodeForCityName(cityName).subscribe(gc => {
+      this.geoCodes = gc;
+      this.getWeatherFromLatLong(gc[0].lat.toString(), gc[0].lon.toString());
+    })
+  }
 
+
+
+
+  getWeatherFromLatLong(latFromGeoCodeAPI: string, longFromGeoCodeAPI: string): void {
+    this.weatherService.getWeatherDataForLatLong(latFromGeoCodeAPI, longFromGeoCodeAPI).subscribe(wd => {
+      this.weatherData = wd;
+    })
   }
 }
