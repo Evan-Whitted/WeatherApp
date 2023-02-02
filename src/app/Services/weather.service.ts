@@ -1,9 +1,9 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GeoCodes } from '../Models/geocode.model';
+import { GeoCodes } from '../models/geocode.model';
 // import { environment } from 'src/environment.ts/environment';
-import { WeatherData } from '../Models/weather.model';
+import { WeatherData } from '../models/weather.model';
 
 @Injectable({
   providedIn: 'root'

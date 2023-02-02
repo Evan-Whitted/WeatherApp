@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GeoCode } from 'src/app/Models/geocode.model';
-import { WeatherData } from 'src/app/Models/weather.model';
-import { WeatherService } from 'src/app/Services/weather.service';
+import { GeoCode } from 'src/app/models/geocode.model';
+import { WeatherData } from 'src/app/models/weather.model';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-weather-card',
