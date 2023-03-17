@@ -19,8 +19,12 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    
   ],
+
+ 
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -20,14 +20,18 @@ export class WeatherCardComponent implements OnInit {
     this.getWeatherDataFromCurrentLocation(this.cityName);
     this.cityName = '';
 
+    
+
   };
 
   onSubmit() {
     this.getWeatherDataFromSearch(this.cityName);
+    this.cityName = '';
+
   }
 
   private getWeatherDataFromCurrentLocation(cityName: string) {
-    this.weatherService.getWeatherDataForCurrentLocation()
+    this.weatherService.getWeatherByGeoLocation()
       .subscribe({
         next: (response) => {
           this.weatherData = response;
