@@ -195,6 +195,10 @@
    text-align: center;
 }
 
+.search input:hover {
+   background-color: var(--shadow-dark);
+}
+
 .upper-data,
 .temperature.location {
    padding-top: 5em;
