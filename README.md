@@ -1,5 +1,11 @@
 # WeatherApp
 
+Howdy, Partner. Welcome to my readme. There IS enough room for both of us in this town. 
+
+This is my design pride and joy at the moment (3/17/23). This Weather App uses the OpenWeatherMap.org API to pull and display 3 hour forecast data including the current temperature, the day’s high, low, humidity percentage, and wind speed.
+
+The design elements were inspired by 2022 trends, and overall simplicity so the weather cards can be cloned and easily turned into a 7 day forecast.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## Development server
